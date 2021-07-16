@@ -105,4 +105,4 @@ const createAPIMessage = async (interaction, content) => {
     return { ...data, files }
 }
 
-client.login(process.env.DISCORD_BOT_TOKEN).then();
+client.login(process.env.TOKEN).then();

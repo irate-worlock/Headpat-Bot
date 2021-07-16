@@ -2,7 +2,6 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const GDServerID = '746000425643147365'
 require('dotenv').config()
-const tenorAPIKey = require('./config/config').tenorAPIKey
 const Tenor = require("tenorjs").client({
     "Key": tenorAPIKey,
     "Filter": "off", // "off", "low", "medium", "high", not case sensitive

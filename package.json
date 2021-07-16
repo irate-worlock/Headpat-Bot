@@ -12,7 +12,8 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
-    "xmlhttprequest": "^1.8.0"
+    "xmlhttprequest": "^1.8.0",
+    "tenorjs": "^1.0.8"
   },
   "devDependencies": {
     "tenorjs": "^1.0.8"

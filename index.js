@@ -2,9 +2,8 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const GDServerID = '746000425643147365'
 require('dotenv').config()
-const tenorAPIKey = require('./config/config').tenorAPIKey
 const Tenor = require("tenorjs").client({
-    "Key": tenorAPIKey,
+    "Key": process.env.TENOR_API_KEY,
     "Filter": "off", // "off", "low", "medium", "high", not case sensitive
     "Locale": "en_US", // Your locale here, case-sensitivity depends on input
     "MediaFilter": "minimal", // either minimal or basic, not case sensitive
@@ -106,4 +105,4 @@ const createAPIMessage = async (interaction, content) => {
     return { ...data, files }
 }
 
-client.login(process.env.TOKEN).then();
+client.login(process.env.DISCORD_BOT_TOKEN).then();

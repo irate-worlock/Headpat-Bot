@@ -51,13 +51,17 @@ client.on('ready', async () => {
         const selectedImage = imageResults[Math.floor(Math.random()*limit)]
         const imageLink = selectedImage.media[0]['gif'].url
 
-        console.log(interaction.member.user)
+        let username = interaction.member.nick
+
+        if (!username) {
+            username = interaction.member.user.username
+        }
 
 
         if (command === 'headpat') {
             const embed = new Discord.MessageEmbed()
                 .setTitle('Headpat')
-                .setDescription(`${interaction.member.user.username} headpats <@${userID}>`)
+                .setDescription(`${interaction.member.nick||interaction.member.user.username} headpats <@${userID}>`)
                 .setColor('#f2b1ee')
                 .setImage(imageLink)
 
